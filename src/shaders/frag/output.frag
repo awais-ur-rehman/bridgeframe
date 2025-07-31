@@ -1,4 +1,8 @@
-precision mediump float;
+#ifdef GL_FRAGMENT_PRECISION_HIGH
+precision highp float;
+#else
+precision lowp float;
+#endif
 
 const int TRAIL_LENGTH = 15;
 const float EPS = 1e-4;
